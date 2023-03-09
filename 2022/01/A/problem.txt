@@ -1,0 +1,9 @@
+Each block of numbers (demarcated with a newline) is a count of the calories being carried by each elf. 
+
+Find the elf that is carrying the most calories.
+
+Method: 
+
+- Split each calory block into an array.
+- For each element in this array find the sum
+- Keep a running total to find the highest
