@@ -1,0 +1,22 @@
+A B C 
+X Y Z 
+
+A X => rock rock => 4 
+A Y => rock paper => 8 
+A Z => rock scissors => 3
+
+B X => paper rock => 1
+B Y => paper paper => 5
+B Z => paper scissors => 9 
+
+C X => scissors rock => 7
+C Y => scissors paper => 2
+C Z => scissors scissors => 6
+
+A, X = rock, score=1
+B, Y = paper, score=2
+C, Z = scissors, score=3
+
+win = 6 
+drawer = 3 
+lose = 0
