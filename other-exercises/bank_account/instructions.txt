@@ -1,0 +1,71 @@
+The goal is to create a simple system that allows users to perform some basic banking operations like creating an account, depositing money, withdrawing money, and checking the balance. Here’s a step-by-step guide:
+
+Step 1: Account Class
+
+Create a class called BankAccount. This class should have the following attributes:
+
+- account_number: A unique identifier for the bank account (you can just generate a random number or a sequential number for simplicity)
+
+- account_holder: The name of the account holder
+balance: The current balance of the account, initialized to 0 when the account is created
+The class should have the following methods:
+
+- deposit(self, amount): Deposits a given amount into the account and returns the new balance.
+
+- withdraw(self, amount): Withdraws a given amount from the account and returns the new balance. If the withdrawal amount is greater than the current balance, print an error message.
+
+- get_balance(self): Returns the current balance of the account.
+
+__str__(self): Returns a string representation of the account, like "Account for [account_holder] with balance [balance]".
+
+
+Step 2: Bank Class
+
+Create a class called Bank which will act as the bank management system. This class should have the following attributes:
+
+- accounts: A dictionary where the keys are the account numbers and the values are the BankAccount instances.
+
+The class should have the following methods:
+
+- create_account(self, account_holder): Creates a new BankAccount with the given account_holder name, adds it to the accounts dictionary, and returns the account number.
+
+- get_account(self, account_number): Returns the BankAccount instance for a given account_number or prints an error message if the account number is not found.
+
+- delete_account(self, account_number): Removes the BankAccount instance with the given account_number from the accounts dictionary or prints an error message if the account number is not found.
+
+Step 3: Command Line Interface
+Implement a simple command line interface where a user can interact with the bank management system. Use the input function to get commands from the user. The user should be able to enter commands like:
+
+- create [account_holder_name]: To create a new account with the given account holder name.
+
+- deposit [account_number] [amount]: To deposit a given amount into a specific account.
+
+- withdraw [account_number] [amount]: To withdraw a given amount from a specific account.
+
+- balance [account_number]: To check the balance of a specific account.
+
+- delete [account_number]: To delete a specific account.
+
+- exit: To exit the program.
+
+Your program should parse these commands, perform the appropriate actions on the Bank and BankAccount instances, and print relevant messages to the console.
+
+Example of the CLI:
+
+> create John
+New account created. Account number: 1001
+
+> deposit 1001 500
+Deposited $500 into account 1001. New balance: $500
+
+> withdraw 1001 200
+Withdrew $200 from account 1001. New balance: $300
+
+> balance 1001
+Balance of account 1001: $300
+
+> delete 1001
+Account 1001 deleted.
+
+> exit
+Goodbye!
