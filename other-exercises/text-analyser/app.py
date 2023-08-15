@@ -28,4 +28,9 @@ def analyse_text(text):
     return text_data
 
 
-print(analyse_text(text_input))
+def main():
+    print(analyse_text(text_input))
+
+
+if __name__ == '__main__':
+    main()
