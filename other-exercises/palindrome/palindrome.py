@@ -1,6 +1,6 @@
-'''
+"""
 Determine if word is a palindrome
-'''
+"""
 
 
 def is_palindrome(inp):
@@ -22,5 +22,5 @@ def main():
     print(is_palindrome(not_palindrome))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
