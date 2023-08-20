@@ -1,8 +1,8 @@
-'''
+"""
 For a given text input, return the following properties as a dictionary:
 total number of characters, number of words, number of sentences,
 number of alpha characters
-'''
+"""
 
 text_input = "I am a student. I love to code."
 
@@ -12,8 +12,8 @@ def parse_text(text, delimiter=None):
         case None:
             return len(text.split())
         case "sentences":
-            trimmed = text.rstrip('.')
-            return len(trimmed.split('.'))
+            trimmed = text.rstrip(".")
+            return len(trimmed.split("."))
         case "letter":
             alphabetic_chars = "".join(filter(str.isalpha, text))
             return len(alphabetic_chars)
@@ -32,5 +32,5 @@ def main():
     print(analyse_text(text_input))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
