@@ -1,7 +1,11 @@
-# Split input lines into groups of three, find the one char that is common to all three
-# Run through char lookup function again and sum
+"""
+Split input lines into groups of three, find the one
+char that is common to all three
+Run through char lookup function again and sum
+"""
 
 import string
+
 test_input = "/home/thomas/repos/advent_of_python/2022/03/input.test.txt"
 main_input = "/home/thomas/repos/advent_of_python/2022/03/input.txt"
 
@@ -18,7 +22,7 @@ with open(main_input, "r") as f:
     triads = []
 
     for i in range(0, len(lines), 3):  # make note of the step value here
-        triads.append(lines[i: i + 3])
+        triads.append(lines[i : i + 3])
 
     common_chars = []
     for group in triads:
