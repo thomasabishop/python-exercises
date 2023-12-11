@@ -1,16 +1,18 @@
-test_input = (
-    "/home/thomas/repos/python_exercises/advent_of_code/2023/data/test_input.txt"
-)
+import os
+
+puzzle_input_path = os.path.join(os.path.dirname(__file__), "data/test_input.txt")
 
 
-def getInput(file_path):
+def getPuzzleInput(file_path):
     with open(file_path, "r") as file:
         return [line.strip() for line in file]
 
 
-test_input = getInput(test_input)
+puzzle_input = getPuzzleInput(puzzle_input_path)
 
 
-def solution(input):
-    return input
-    # print(input)
+def solution(puzzle_input):
+    print(puzzle_input)
+
+
+solution(puzzle_input)
